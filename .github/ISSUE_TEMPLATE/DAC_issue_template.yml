@@ -6,15 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        After creating the issue, set **Event Date** in the right sidebar (Projects → DAC Meeting Dates) so it shows on the roadmap.
-
-  - type: input
-    id: date
-    attributes:
-      label: Date
-      placeholder: "DD/MM/YYYY"
-    validations:
-      required: true
+        ### After clicking Create, set **Event Date** on the right (Projects → DAC Meeting Dates). This is what puts your meeting on the calendar.
 
   - type: textarea
     id: done
@@ -34,8 +26,6 @@ body:
     id: suggestions
     attributes:
       label: Suggestions from the meeting
-      description: "Fill this in after the meeting, one per line, so they can be ticked off."
-      value: |
-        - [ ]
+      description: "Fill this in after the meeting. Add one per line as - [ ] suggestion, so they can be ticked off."
     validations:
       required: false
