@@ -1,67 +1,41 @@
 name: "DAC issue template"
-description: "Log your upcoming DAC (Doctoral Advisory Committee) meeting so it shows on the DAC Meeting Dates roadmap."
-title: "Your Name – DAC (e.g. Sai Ahil – DAC 1)"
+description: "Log your upcoming DAC meeting."
+title: "Your Name – DAC"
 projects: ["ManipalPharmacometrics/11"]
 body:
   - type: markdown
     attributes:
       value: |
-        **Title:** please write your name first, then the DAC number, e.g. `Sai Ahil – DAC 1`.
+        After creating the issue, set **Event Date** in the right sidebar (Projects → DAC Meeting Dates) so it shows on the roadmap.
 
-        **Important – to show on the roadmap:** after you click *Create*, look at the right sidebar under **Projects → DAC Meeting Dates** and set **Event Date** to your DAC date. Issues without an Event Date will not appear on the timeline.
-
-  - type: dropdown
-    id: dac_number
+  - type: input
+    id: date
     attributes:
-      label: Which DAC meeting is this?
-      options:
-        - DAC 1
-        - DAC 2
-        - DAC 3
-        - DAC 4
-        - Pre-synopsis DAC
-        - Other
+      label: Date
+      placeholder: "DD/MM/YYYY"
     validations:
       required: true
 
-  - type: input
-    id: venue
+  - type: textarea
+    id: done
     attributes:
-      label: Time and venue
-      description: "e.g. 10:30 AM – Room 204, or online (Teams link)"
+      label: What's done till now
     validations:
-      required: false
+      required: true
 
   - type: textarea
     id: plan
     attributes:
-      label: What is planned for this DAC
-      description: Objectives, results or chapters you will present to the committee.
-      placeholder: |
-        -
-        -
+      label: Plan for the meeting
     validations:
       required: true
 
   - type: textarea
-    id: progress
+    id: suggestions
     attributes:
-      label: Progress since the last DAC
+      label: Suggestions from the meeting
+      description: "Fill this in after the meeting, one per line, so they can be ticked off."
+      value: |
+        - [ ]
     validations:
       required: false
-
-  - type: textarea
-    id: needs
-    attributes:
-      label: Inputs / decisions needed from the committee
-    validations:
-      required: false
-
-  - type: checkboxes
-    id: checklist
-    attributes:
-      label: DAC preparation checklist
-      options:
-        - label: Presentation draft shared with supervisor
-        - label: Progress report sent to DAC members
-        - label: Date and venue confirmed with all DAC members
