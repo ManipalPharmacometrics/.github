@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Set the **Target date** in the sidebar.
+        Set the **Event date** in the Projects dropdown.
 
   - type: textarea
     id: done
