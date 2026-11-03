@@ -1,17 +1,23 @@
-name: "DAC issue template"
-description: "Log your upcoming DAC meeting."
-title: "Your Name – DAC"
-projects: ["ManipalPharmacometrics/11"]
+name: "Meeting template"
+description: "Log an upcoming meeting."
+title: "Your Name – Meeting"
 body:
   - type: markdown
     attributes:
       value: |
-        After creating the issue, set **Event Date** in the right sidebar (Projects → DAC Meeting Dates) so it shows on the roadmap.
+        **Before you submit:** replace *Your Name* in the title above (e.g. `Sai Ahil – Meeting`).
+
+        **After creating the issue:** add it to the relevant project in the right sidebar and set the **Target date** (the planned meeting date).
+
+        **After the meeting:** click **⋯ → Edit** on this issue, add the suggestions under *Suggestions from the meeting*, then close the issue. Closed issues stay in the **Closed** tab for reference.
 
   - type: textarea
     id: done
     attributes:
       label: What's done till now
+      description: "One item per line."
+      value: |
+        -
     validations:
       required: true
 
@@ -19,6 +25,9 @@ body:
     id: plan
     attributes:
       label: Plan for the meeting
+      description: "What you will present or discuss. One item per line."
+      value: |
+        -
     validations:
       required: true
 
@@ -35,6 +44,8 @@ body:
     id: suggestions
     attributes:
       label: Suggestions from the meeting
-      description: "Fill this in after the meeting, one per line, so they can be ticked off."
+      description: "Leave blank for now. After the meeting, edit the issue and add one suggestion per line so they can be ticked off."
+      value: |
+        - [ ]
     validations:
       required: false
